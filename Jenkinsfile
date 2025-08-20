@@ -1,20 +1,35 @@
-pipeline{
+pipeline {
     agent any
 
-    stages{
-        stage ('Clone the code'){
-            steps{
-                sh 'echo "Cloning the code"'
+    stages {
+        stage('Validate the code') {
+            steps {
+                sh 'mvn validate'
             }
         }
-        stage ('Validate the code')
+
+        stage('Compile & Build the App') {
             steps {
-                sh 'echo "Validating the code"'
+                sh 'mvn clean install'
             }
-        stage ('Compile & Build the App')
-            steps{
-                sh 'echo "Building the code"'
+        }
+
+        stage('Test the App') {
+            steps {
+                sh 'mvn test'
             }
-    
+        }
+    }
+
+    post {
+        always {
+            echo 'Pipeline finished!'
+        }
+        success {
+            echo 'Build succeeded'
+        }
+        failure {
+            echo 'Build failed'
+        }
     }
 }
