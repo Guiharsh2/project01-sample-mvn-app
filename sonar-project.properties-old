@@ -1,0 +1,8 @@
+sonar.verbose=true
+sonar.projectKey=Guiharsh2_project01-sample-mvn-app
+sonar.organization=guiharsh2
+#sonar.projectName=project01-sample-mvn-app
+sonar.language=java
+sonar.sourceEncoding=UTF-8
+sonar.sources=.
+sonar.java.binaries=target/classes

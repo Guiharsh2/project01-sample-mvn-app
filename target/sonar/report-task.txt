@@ -1,0 +1,7 @@
+organization=guiharsh2
+projectKey=Guiharsh2_project01-sample-mvn-app
+serverUrl=https://sonarcloud.io
+serverVersion=8.0.0.66444
+dashboardUrl=https://sonarcloud.io/dashboard?id=Guiharsh2_project01-sample-mvn-app
+ceTaskId=AZjSPtcOvWggGElD8p2H
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AZjSPtcOvWggGElD8p2H
